@@ -28,9 +28,9 @@ yunohost = ">= 11.1.21"
 architectures = "all"
 multi_instance = true
 # FIXME: replace with true, false, or "not_relevant". Not to confuse with the "sso" key: the "ldap" key corresponds to wether or not a user *can* login on the app using its YunoHost credentials.
-ldap = "?"
+ldap = "false"
 # FIXME: replace with true, false, or "not_relevant". Not to confuse with the "ldap" key: the "sso" key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal.
-sso = "?"
+sso = ""
 # FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G...
 disk = "50M"
 ram.build = "50M"
@@ -114,6 +114,6 @@ ram.runtime = "50M"
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
     packages = "php8.2-gd"
 
-    [resources.database]
+################"    [resources.database]
     # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
     #type = "mysql"
