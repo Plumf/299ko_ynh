@@ -2,8 +2,8 @@ packaging_format = 2
 
 id = "299ko"
 name = "299ko CMS"
-description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
-description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+description.en = "299ko is a CMS with a single user. It is lightweight and does not require a database."
+description.fr = "299ko est un CMS doté d'un⋅e utilisateur⋅ice unique. Il se veut léger et ne nécessite pas de base de donnée"
 
 version = "1.2.5~ynh1"
 
@@ -13,14 +13,9 @@ maintainers = ["Plumf"]
 # NB: Only the "license" key is mandatory. Remove entries for which there's no relevant data
 license = "free"
 website = "https://299ko.ovh/"
-demo = "https://demo.example.com"
 admindoc = "https://yunohost.org/packaging_apps"
 userdoc = "https://yunohost.org/apps"
 code = "https://github.com/299Ko/299ko"
-# FIXME: optional but recommended if relevant, this is meant to contain the Common Platform Enumeration, which is sort of a standard id for applications defined by the NIST. In particular, YunoHost may use this is in the future to easily track CVE (=security reports) related to apps. The CPE may be obtained by searching here: https://nvd.nist.gov/products/cpe/search. For example, for Nextcloud, the CPE is 'cpe:2.3:a:nextcloud:nextcloud' (no need to include the version number)
-cpe = "???"
-# FIXME: optional but recommended (or remove if irrelevant / not applicable). This is meant to be an URL where people can financially support this app, especially when its development is based on volunteers and/or financed by its community. YunoHost may later advertise it in the webadmin.
-fund = "???"
 
 [integration]
 yunohost = ">= 11.1.21"
@@ -28,9 +23,9 @@ yunohost = ">= 11.1.21"
 architectures = "all"
 multi_instance = true
 # FIXME: replace with true, false, or "not_relevant". Not to confuse with the "sso" key: the "ldap" key corresponds to wether or not a user *can* login on the app using its YunoHost credentials.
-ldap = "false"
+ldap = "not_relevant"
 # FIXME: replace with true, false, or "not_relevant". Not to confuse with the "ldap" key: the "sso" key corresponds to wether or not a user is *automatically logged-in* on the app when logged-in on the YunoHost portal.
-sso = ""
+sso = "not_relevant"
 # FIXME: replace with an **estimate** minimum disk and RAM requirements. e.g. 20M, 400M, 1G...
 disk = "50M"
 ram.build = "50M"
@@ -66,8 +61,8 @@ ram.runtime = "50M"
     [install.password]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     # Note that user-provided passwords questions are not automatically saved as setting
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
+    help.en = "299ko administration password."
+    help.fr = "Mot de passe d'administration de 299ko."
     type = "password"
 
 [resources]
@@ -113,7 +108,3 @@ ram.runtime = "50M"
     # This will automatically install/uninstall the following apt packages
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
     packages = "php8.2-gd"
-
-################"    [resources.database]
-    # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
-    #type = "mysql"
