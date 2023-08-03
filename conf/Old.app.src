@@ -1,5 +1,0 @@
-SOURCE_URL=https://github.com/299Ko/299ko/archive/refs/tags/v1.2.5.tar.gz
-SOURCE_SUM=c005eecf2949de49558286f487405c2efbb54c187be634c6797fecbcd0b31e6a
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
